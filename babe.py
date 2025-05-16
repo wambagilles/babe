@@ -1,6 +1,6 @@
 import getpass
 import os
-
+import streamlit as st
 from langchain.chat_models import init_chat_model
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
@@ -67,7 +67,7 @@ qa_chain = load_qa_chain(llm, chain_type="stuff", prompt=prompt)
 
 
 
-import streamlit as st
+
 
 # Assume qa_chain is already initialized elsewhere and available here
 # from your_module import qa_chain
