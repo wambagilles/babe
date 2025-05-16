@@ -2,10 +2,7 @@ import getpass
 import os
 
 from langchain.chat_models import init_chat_model
-if not os.environ.get("OPENAI_API_KEY"):
-  os.environ["OPENAI_API_KEY"] = "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"#getpass.getpass("Enter API key for OpenAI: ")
-
-llm = init_chat_model("gpt-4o-mini", model_provider="openai")
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 
 #from langchain_chroma import Chroma
