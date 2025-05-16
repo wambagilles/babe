@@ -24,11 +24,7 @@ from langchain_openai import OpenAIEmbeddings
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 
 
-vector_store = Chroma(
-    collection_name="babe",
-    embedding_function=embeddings,
-    persist_directory="./chroma_langchain_db",  
-)
+
 
 
 
