@@ -1,8 +1,11 @@
 import getpass
 import os
 import streamlit as st
+
 from langchain.chat_models import init_chat_model
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
+llm = init_chat_model("gpt-4o-mini", model_provider="openai")
 
 
 #from langchain_chroma import Chroma
@@ -63,7 +66,6 @@ qa_chain = load_qa_chain(llm, chain_type="stuff", prompt=prompt)
 #response = qa_chain.run(input_documents=split_docs, question=query)
 
 #print("Answer:", response)
-
 
 
 
